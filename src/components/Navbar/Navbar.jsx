@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillHome } from 'react-icons/ai';
 
 import { Container, Div1, Div2, NavLink } from "./NavbarStyles";
 
@@ -10,7 +10,8 @@ const Navbar = () => {
         <Container>
             <Div1>
                 <Link to="/">
-                    <AiFillGithub size="3rem" />
+                    <AiFillHome size="3rem" />
+                    <NavLink>Home</NavLink>
                 </Link>
             </Div1>
             <Div2>

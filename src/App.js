@@ -1,18 +1,19 @@
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { About, Navbar, Home } from './components';
+import { About, Navbar, Home, ProductGrid } from './components';
+import ProductDetailContainer from './containers/ProductDetailContainer/ProductDetailContainer';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={< Home />} />
-          <Route path="/about" element={< About />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={< Home />} />
+        <Route path="/about" element={< About />} />
+        <Route path="/products" element={< ProductGrid />} />
+        <Route path="/products/:productId" element={< ProductDetailContainer />} />
+      </Routes>
     </Router>
   );
 }
