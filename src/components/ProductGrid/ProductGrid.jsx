@@ -17,13 +17,13 @@ const dummyProducts = [{
     }
 }];
 
-const ProductGrid = () => {
+const ProductGrid = ({ products }) => {
     const classes = useStyles();
     return (
         <main>
             <div className={classes.toolbar} />
             <Grid container justify="center" spacing={4}>
-                {dummyProducts.map((product) => (
+                {products.map((product) => (
                     <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
                         <Product product={product} />
                     </Grid>

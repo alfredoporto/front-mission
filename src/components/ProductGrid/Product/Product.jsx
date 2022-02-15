@@ -9,7 +9,7 @@ const Product = ({ product }) => {
 
     return (
         <Link to={`/products/${product.id}`}>
-            <Card className={classes.root} variant="outlined">
+            <Card className={classes.cardRootSameHeight} variant="outlined">
                 <CardHeader
                     avatar={
                         <Avatar alt="" src="https://yt3.ggpht.com/ytc/AKedOLRAPZLAzlT7sqxT2cxsX1AEsOgUIinaNlVigDNVzw=s900-c-k-c0x00ffffff-no-rj" />
