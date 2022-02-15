@@ -9,21 +9,18 @@ const ProductDetailContainer = () => {
     const [product, setProduct] = useState({});
     const { productId } = useParams();
 
+    const fetchProducts = async () => {
+        const res = await fetch('https://fakestoreapi.com/products/' + productId).then(r => r.json());
 
-
+        setProduct(res);
+        setLoading(false);
+    }
     useEffect(() => {
-        /* Aca estaria llamando a la API por el item con el id */
-        const fetchData = async () => {
-            const res = await fetch('https://fakestoreapi.com/products/' + productId).then(r => r.json());
-            setProduct(res);
-            setLoading(false);
-        }
-
-        fetchData();
+        fetchProducts();
     }, [productId]);
 
     return (
-        <Box minHeight="87vh">
+        <Box>
             {loading === true ? <Spinner /> : <ProductDetail product={product} />}
         </Box>
     )
