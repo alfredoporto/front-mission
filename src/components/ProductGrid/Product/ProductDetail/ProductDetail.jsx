@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Avatar, Box, Button, CardHeader, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
+import { Box, Button, CardMedia, Chip, Grid, Typography } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
+import MirHeader from '../../../Shared/MirHeader';
 
 import useStyles from './styles';
 
@@ -12,14 +13,7 @@ const ProductDetail = ({ product }) => {
     return (
         <Grid>
             <Grid>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="" src="https://yt3.ggpht.com/ytc/AKedOLRAPZLAzlT7sqxT2cxsX1AEsOgUIinaNlVigDNVzw=s900-c-k-c0x00ffffff-no-rj" />
-                    }
-                    title="Make It Real"
-                    subheader="Product Detail"
-
-                />
+                <MirHeader headers={{ title: "Make It Real", subheader: "Product Detail" }} />
             </Grid>
 
             <Grid container spacing={4} className={classes.gridContainer}>

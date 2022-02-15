@@ -1,10 +1,11 @@
 import React from "react";
 import myself from '../../images/io.jpg';
-import { Avatar, CardHeader, CardMedia, Divider, Grid, Typography } from '@material-ui/core';
+import { CardMedia, Divider, Grid, Typography } from '@material-ui/core';
 import { Box, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { AiFillLinkedin, AiFillGitlab, AiFillInstagram, AiFillMail } from 'react-icons/ai';
 
 import useStyles from './styles';
+import MirHeader from "../Shared/MirHeader";
 
 
 function About() {
@@ -13,13 +14,7 @@ function About() {
     return (
         <Grid >
             <Grid>
-                <CardHeader
-                    avatar={
-                        <Avatar alt="" src="https://yt3.ggpht.com/ytc/AKedOLRAPZLAzlT7sqxT2cxsX1AEsOgUIinaNlVigDNVzw=s900-c-k-c0x00ffffff-no-rj" />
-                    }
-                    title="Make It Real"
-                    subheader="Maker"
-                />
+                <MirHeader headers={{ title: "Make It Real", subheader: "Maker" }} />
             </Grid>
 
             <Grid container spacing={4} className={classes.gridContainer}>

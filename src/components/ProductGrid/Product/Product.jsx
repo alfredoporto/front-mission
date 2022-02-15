@@ -1,6 +1,7 @@
 import React from 'react'
-import { Avatar, Box, Card, CardContent, CardHeader, CardMedia, Chip, Grid } from '@material-ui/core';
+import { Box, Card, CardContent, CardMedia, Chip, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import MirHeader from '../../Shared/MirHeader';
 
 import useStyles from './styles';
 
@@ -10,14 +11,7 @@ const Product = ({ product }) => {
     return (
         <Link to={`/products/${product.id}`}>
             <Card className={classes.cardRootSameHeight} variant="outlined">
-                <CardHeader
-                    avatar={
-                        <Avatar alt="" src="https://yt3.ggpht.com/ytc/AKedOLRAPZLAzlT7sqxT2cxsX1AEsOgUIinaNlVigDNVzw=s900-c-k-c0x00ffffff-no-rj" />
-                    }
-                    title={product.title}
-                    subheader={product.category}
-
-                />
+                <MirHeader headers={{ title: product.title, subheader: product.category }} />
                 <div>
                     <Link to={`/products/${product.id}`}>
                         <CardMedia className={classes.cardMedia}
