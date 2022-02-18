@@ -1,27 +1,43 @@
 import React from 'react'
+import useStyles from './styles';
 
 const Home = () => {
-    return (
-        <div style={{ padding: '1rem', paddingTop: '2rem' }}>
-            <h1>Proyecto</h1>
-            <br />
-            <p>Construir una aplicación web la cual consta de tres páginas:</p>
-            <ul>
-                <li>Home</li>
-                <li>Product Detail</li>
-                <li>About</li>
-            </ul>
-            <p>La aplicación debe tener un menú que le permita al usuario navegar entre estas páginas.</p>
-            <br />
-            <h3>Requerimientos</h3>
-            <ul>
-                <li> Usar Flexbox CSS.</li>
-                <li> El proyecto debe tener configurado ESLint y el Prettier y que tus archivos no tengan problemas con estos.</li>
-                <li> El código del proyecto debe estar en un repositorio público de tu autoría.</li>
-                <li> Bonus: Implementar tu CSS con BEM o módulos de CSS.</li>
-            </ul>
+    const classes = useStyles();
 
-        </div >
+    return (
+
+        <section className={classes.cSection}>
+            <h2 className={classes.cSectionTitle}>
+                <span>Our Services</span>
+            </h2>
+            <ul className={classes.cSectionServices} >
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>Responsive Web Design</h3>
+                    <p>We leverage the concept of mobile-first design. Through our work, we focus on designing an experience that works across different screen sizes.</p>
+                </li>
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>UX Auditing</h3>
+                    <p>If you are unsure of how your app behaves, we can help by doing a detailed UX audit that will highlight most of the issues in your product. From there, we can take it further and fix all issues.</p>
+                </li>
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>Front End Development</h3>
+                    <p>We are Front End masters with a deep focus on HTML, CSS. The result of our work is a responsive, accessible, and performant websites. Either you have the design ready and want us to code it, or you want us to do both design and code, we’re happy to do so.</p>
+                </li>
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>UX Consultation</h3>
+                    <p>If you don’t know what kind of service to request from us, don’t worry. We can help and see what fits your business and your budget.</p>
+                </li>
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>Mobile Apps Design</h3>
+                    <p>To reach more customers and the goals of your business, a mobile application is necessary these days. We will work on the app design from scratch to final tested prototype.</p>
+                </li>
+                <li className={classes.cSectionServicesItem}>
+                    <h3 className={classes.cSectionServicesItemTitle}>UX Research</h3>
+                    <p>It’s important to research deeply for the product you want to build. We help in that by defining the user audience, working on user stories, competitive analysis and much more.</p>
+                </li>
+            </ul>
+        </section>
+
     )
 }
 
