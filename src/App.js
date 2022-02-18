@@ -9,7 +9,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const res = await fetch('https://fakestoreapi.com/products?limit=6').then(r => r.json());
+    const res = await fetch('https://fakestoreapi.com/products?limit=8').then(r => r.json());
 
     setProducts(res);
   }

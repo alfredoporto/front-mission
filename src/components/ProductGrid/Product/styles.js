@@ -21,5 +21,14 @@ export default makeStyles(() => ({
     },
     cardMedia: {
         paddingBottom: '40px'
+    },
+
+    linkOn: {
+        textDecoration: 'none',
+        pointerEvents: 'auto'
+    },
+    linkOff: {
+        textDecoration: 'none',
+        pointerEvents: 'none'
     }
 }));

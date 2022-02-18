@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai';
 
-import { Container, Div1, Div2, NavLink } from "./NavbarStyles";
+import { Container, Div1, Div2, NavLink } from "./styles";
 
 
 const Navbar = () => {

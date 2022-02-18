@@ -47,6 +47,23 @@ function About() {
                             My name is Alfredo Portocarrero and I am a software engineer; I've worked in both backend and frontend having Java as his go-to language, working with sql and no-sql databases like PostgreSQL, Oracle, Apache Cassandra and so on, and various frameworks such as Spring Boot, Hibernate, Angular for software on promise and cloud.
                             I always try to keep in mind the maintainability and extensibility as directives for building software.
                         </Typography>
+                        <br />
+                        <Typography variant="body1" color="textSecondary" >
+                            In the last couple of months, I've learned many things and the most interesting ones have been:
+                        </Typography>
+
+                        <List>
+                            <ListItem>
+                                <ListItemText secondary="React.js following along side with a new way of thinking when creating UI components"></ListItemText>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText secondary="Best practices for working in teams with git"></ListItemText>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText secondary="How the DOM works, the browser engine and best uses cases for when to use NodeJS"></ListItemText>
+                            </ListItem>
+                        </List>
+
                         <Typography variant="body1" color="textSecondary" gutterBottom style={{ paddingTop: '1rem' }}>
                             In my free time I love to go to the gym, play videogames and walk my dogs :)
                         </Typography>
