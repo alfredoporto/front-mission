@@ -25,10 +25,8 @@ const Product = ({ product, timeLeft }) => {
 
     }, [countDown]);
 
-
-
     return (
-        <Link to={`/products/${product.id}`} className={countDown ? classes.linkOn : classes.linkOff}>
+        <Link to={`/products/${product.id}`} style={!countDown ? { display: 'flex', height: '100%', pointerEvents: 'none', textDecoration: 'none' } : { pointerEvents: 'auto', textDecoration: 'none' }}>
             <Card className={classes.cardRootSameHeight} variant="outlined">
                 <MirHeader headers={{ title: product.title, subheader: product.category }} />
                 <div>
